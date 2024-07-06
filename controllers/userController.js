@@ -16,7 +16,7 @@ export class UserController {
             const token = await generateToken(userSave._id);
 
             res.cookie('access_token', token, {
-                httpOnly: true,
+                httpOnly: false,
                 maxAge: 1000 * 60 * 60
             }).json({
                 icon: 'success',
