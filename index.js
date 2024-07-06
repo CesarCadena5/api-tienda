@@ -17,7 +17,7 @@ const app = express();
 connectionDb();
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'https://api-tienda-xwt7.onrender.com',
     credentials: true,
 };
 
