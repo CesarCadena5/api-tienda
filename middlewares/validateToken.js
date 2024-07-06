@@ -5,7 +5,6 @@ import { User } from "../models/UserModel.js";
 export const validateToken = async (req, res, next) => {
     try {
         const { access_token: token } = req.cookies;
-        console.log(token)
         if (!token) {
             return res.status(401).json({
                 icon: 'error',
