@@ -17,7 +17,7 @@ const app = express();
 connectionDb();
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'https://tienda-cesar.netlify.app',
     credentials: true,
 };
 
