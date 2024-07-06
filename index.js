@@ -16,12 +16,13 @@ const app = express();
 // Conexión a BD
 connectionDb();
 
-const corsOptions = {
-    origin: 'https://tienda-cesar.netlify.app',
-    credentials: true,
-};
+// const corsOptions = {
+//     origin: 'https://tienda-cesar.netlify.app',
+//     credentials: true,
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
