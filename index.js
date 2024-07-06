@@ -16,13 +16,12 @@ const app = express();
 // Conexión a BD
 connectionDb();
 
-// const corsOptions = {
-//     origin: 'https://tienda-cesar.netlify.app',
-//     credentials: true,
-// };
+const corsOptions = {
+    origin: 'https://tienda-cesar.netlify.app',
+    credentials: true,
+};
 
-// app.use(cors(corsOptions));
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 
@@ -34,6 +33,13 @@ app.use('/product', routesProduct);
 app.use('/supplier', routesSupplier);
 app.use('/customer', routesCustomer);
 app.use('/category', routesCategory);
+
+app.options('*', (req, res) => {
+    res.set('Access-Control-Allow-Origin', 'https://tienda-cesar.netlify.app');
+    res.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.status(200).end();
+});
 
 app.listen(PORT, () => {
     console.log('Corriendo en el puerto ' + PORT);
