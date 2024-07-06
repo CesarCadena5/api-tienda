@@ -2,7 +2,7 @@ import { Router } from "express";
 import { check } from "express-validator";
 
 import { validateFields } from "../middlewares/validateFields.js";
-import { UserController } from "../controllers/UserController.js";
+import { UserController } from "../controllers/userController.js";
 import { validateExistsEmail } from "../helpers/validateExistsEmail.js";
 import { validateToken } from "../middlewares/validateToken.js";
 // import { validateToken } from "../middlewares/validateToken.js";
