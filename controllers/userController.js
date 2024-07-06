@@ -16,8 +16,9 @@ export class UserController {
             const token = await generateToken(userSave._id);
 
             res.cookie('access_token', token, {
-                httpOnly: false,
-                maxAge: 1000 * 60 * 60
+                httpOnly: true,
+                maxAge: 1000 * 60 * 60,
+                domain: 'https://tienda-cesar.netlify.app'
             }).json({
                 icon: 'success',
                 msg: 'Usuario creado con éxito.',
