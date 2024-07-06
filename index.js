@@ -22,7 +22,7 @@ connectionDb();
 // };
 
 const corsOptions = {
-    origin: 'https://tienda-cesar.netlify.app',
+    origin: 'https://tienda-285p.onrender.com',
     credentials: true,
 };
 
@@ -40,7 +40,7 @@ app.use('/customer', routesCustomer);
 app.use('/category', routesCategory);
 
 app.options('*', (req, res) => {
-    res.set('Access-Control-Allow-Origin', 'https://tienda-cesar.netlify.app');
+    res.set('Access-Control-Allow-Origin', 'https://tienda-285p.onrender.com');
     res.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     res.status(200).end();
