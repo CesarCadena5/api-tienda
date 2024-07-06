@@ -18,6 +18,7 @@ export class UserController {
             res.cookie('access_token', token, {
                 httpOnly: true,
                 maxAge: 1000 * 60 * 60,
+                domain: 'https://tienda-285p.onrender.com'
             }).json({
                 icon: 'success',
                 msg: 'Usuario creado con éxito.',
